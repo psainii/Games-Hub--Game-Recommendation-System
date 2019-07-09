@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Games Hub:- {{details.0}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800|Playfair+Display:,300, 400, 700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/css1%2Fbootstrap.css?alt=media&token=afa78f23-a9e6-4e0e-bd27-c0deb8679514">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/css1%2Fanimate.css?alt=media&token=cd448671-4a1c-424b-a298-b81e3274f3c7">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/css1%2Fowl.carousel.min.css?alt=media&token=58ea55eb-eb31-4679-b429-e4179958b096">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/font1%2Fionicons.min.css?alt=media&token=5a6d509f-154f-4363-9ac6-eea8f8015e89">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/font1%2Ffont-awesome.min.css?alt=media&token=606e5d01-7c9e-4981-abe4-5018165fdece">
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/css1%2Fstyle.css?alt=media&token=74121f84-e2bb-42a1-9850-ec3478622c68">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+      <aside style="background-image:url({{details.5}});background-position:center;"></aside>
+      <main>
+        <h1 class="mb-0">{{details.0}}</h1>
+        <br>
+        <br>
+        <div class="mb-5">
+        <p style="color:black;font-size:20px;"><strong>Developer:-</strong>    {{details.1}}</p>
+        <p style="color:black;font-size:20px;"><strong>Launch Year:-</strong>  {{details.2}}</p>
+        <p style="color:black;font-size:20px;"><strong>Genre:-</strong>    {{details.3}}</p>
+        <p style="color:black;font-size:20px;"><strong>Review:-</strong></p>
+        <p style="color:black;font-size:15px;">{{details.4}}</p>
+        </div>
+        <div>
+        <style>
+        .fa {
+          font-size:30px;
+          cursor:pointer;
+          width:60px;
+          height:60px;
+          border-radius:100%;
+          line-height:60px;
+          text-align:center;
+          background-color:orange;
+          color:white;
+          margin-right:20px;
+        }
+        .fa:hover
+        {
+          color:blue;
+          background-color:white;
+        } 
+        .fa:active
+        {
+          color:blue;
+          background-color:white;
+        }
+        </style>
+        <i id='e1' onclick="likeinc('{{details.0}}')" class="fa fa-thumbs-up"></i>
+        <i id='e2' onclick="likedesc('{{details.0}}')" class="fa fa-thumbs-down"></i>
+        <script>
+          function likeinc(name)
+          {
+            $.ajax({
+              type: "POST",
+              url: "{{ request.get_full_path }}",
+              data: {
+                'gamen' : name,
+                'flag' : 1,
+              },
+              dataType: 'json',
+              success: function(data){
+                console.log("ok");
+                alert("You have liked this game.")
+              },
+              error: function(xhr){
+                console.log("error");
+              },
+            });
+          }
+            function likedesc(name)
+          {
+            $.ajax({
+              type: "POST",
+              url: "{{ request.get_full_path }}",
+              data: {
+                'gamen' : name,
+                'flag' : -1,
+              },
+              dataType: 'json',
+              success: function(data){
+                console.log("ok");
+                alert("You have disliked this game")
+              },
+              error: function(xhr){
+                console.log("error");
+              },
+            });
+          }
+        </script>
+        </div>
+        <p style="text-align:right;">
+          <a href="{% url 'index' %}" class="mr-2 mb-2"">HOME</a>
+       </p>
+        </div>
+        
+      </main>
+    </div>
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fjquery-3.2.1.min.js?alt=media&token=eb1c6758-37a5-4539-bd96-568380e35844"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fpopper.min.js?alt=media&token=4ffffeee-a778-459a-b3c5-12a64b653a01"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fbootstrap.min.js?alt=media&token=c6d50cd6-6273-46fc-9c1e-0e6a6ee461a0"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fowl.carousel.min.js?alt=media&token=4080b0a8-2e70-4c9c-a899-33b4c4a80a68"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fjquery.waypoints.min.js?alt=media&token=0e1d78b5-f5c2-416b-ab92-2235bcb97ef8"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fjquery.countdown.min.js?alt=media&token=b53cb9c7-6201-45b2-9fb0-22d1ef38f8e0"></script>
+    <script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js1%2Fmain.js?alt=media&token=7a0a36e3-bd1d-48dc-ae76-ef3b54ff6423"></script>
+  </body>
+</html>

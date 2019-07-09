@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Games Hub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Games Hub Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/todc-bootstrap/3.3.7-3.3.13/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/style.css?alt=media&token=47bd19de-b5b0-49b1-aeaf-a88bf479c8c3" type="text/css" media="all" />
+<!--// css -->
+<!-- font-awesome icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome icons -->
+<!-- portfolio -->	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chocolat/0.4.20/css/chocolat.css" type="text/css" media="all">
+<!-- //portfolio -->	
+<!-- font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300' rel='stylesheet' type='text/css'>
+<!-- //font -->
+<script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js%2Fjquery-1.11.1.min.js?alt=media&token=94f912da-bc87-47fb-8bf6-13a3d415a06e"></script>
+<script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js%2Fbootstrap.js?alt=media&token=f2e5c23b-745f-47ea-ab12-85af307dca72"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script> 
+
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<!-- banner -->
+	<div class="banner">
+		<div class="agileinfo-dot">
+			<div class="agileits-logo">
+				<h1><a href="index.html">Games <span>Hub</span></a></h1>
+			</div>
+			<div class="header-top">
+				<div class="container">
+					<div class="header-top-info">
+						<nav class="navbar navbar-default">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+								<nav>
+									<ul class="nav navbar-nav">
+										<li class="active"><a href="">Home</a></li>
+										<li><a href="{% url 'about' %}">About Us</a></li>
+										<li><a href="popular">Popular Games</a></li>
+										<li><a href="latest">Latest Games</a></li>
+										<li><a href="contact">Contact Us</a></li>
+									</ul>
+								</nav>
+							</div>
+							<!-- /.navbar-collapse -->
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="w3layouts-banner-info">
+				<div class="container">	
+					<div class="w3layouts-banner-slider">
+						<div class="w3layouts-banner-top-slider">
+							<div class="slider">
+								<div class="callbacks_container">
+									<ul class="rslides callbacks callbacks1" id="slider4">
+										<li>
+											<div class="banner_text">
+												<h3>Ready</h3>
+												<p>Tighten your seat belts</p>
+												<div class="w3-button">
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="banner_text">
+												<h3>Set</h3>
+												<p>Set the gear</p>
+												<div class="w3-button">
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="banner_text">
+												<h3>Game On</h3>
+												<p>Drive your way through whole new gaming experince</p>
+												<div class="w3-button">
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="clearfix"> </div>
+								<script src="https://firebasestorage.googleapis.com/v0/b/website-21553.appspot.com/o/js%2Fresponsiveslides.min.js?alt=media&token=75b694d5-f899-4edd-ac03-f5d7b32700e4"></script>
+								<script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									  // Slideshow 4
+									  $("#slider4").responsiveSlides({
+										auto: true,
+										pager:true,
+										nav:true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+										  $('.events').append("<li>before event fired.</li>");
+										},
+										after: function () {
+										  $('.events').append("<li>after event fired.</li>");
+										}
+									  });
+								
+									});
+								 </script>
+								<!--banner Slider starts Here-->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
